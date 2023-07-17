@@ -17,11 +17,11 @@ const useCart = create(
   items: [],
   addItem: (data: Product) => {
     set({ items: [...get().items, data] });
-    toast.success('Item added to cart.');
+    toast.success('Maträtten har lagts till i din beställning');
   },
   removeItem: (id: string) => {
     set({ items: [...get().items.filter((item) => item.id !== id)] });
-    toast.success('Item removed from cart.');
+    toast.success('Maträtten har tagits bort från din beställning');
   },
   removeAll: () => set({ items: [] }),
 }), {
